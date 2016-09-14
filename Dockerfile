@@ -32,5 +32,5 @@ RUN pip install git+https://github.com/azraq27/neural.git \
 # padre config:
 ENV PADRE_ROOT /padre
 VOLUME ${PADRE_ROOT}
-RUN useradd -m -u 4144 bgross
-USER bgross
+#RUN useradd -m -u 4144 bgross
+#USER bgross
