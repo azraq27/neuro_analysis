@@ -17,4 +17,4 @@ The script I use to launch commands is:
 
 `padre` is a Python fMRI data organization library I wrote: http://github.com/azraq27/padre
 
-`neural` is a Python fMRI analysis library
+`neural` is a Python fMRI analysis library: http://github.com/azraq27/neural
