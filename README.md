@@ -1,17 +1,18 @@
 # neuro_analysis
-Dockerfile for building the neuro_analysis2 docker container
+Dockerfile for building the neuro_analysis docker container
 
 Contains a ready-to-analyze Ubuntu container with common neuroimaging tools, including:
 * FSL
 * AFNI
 * Freesurfer
+* R
 * Custom Python scripts
 
 The script I use to launch commands is:
 
     #!/bin/bash
    
-    sudo -E docker run -v ${PADRE_ROOT}:/padre -v `pwd`:/working -w /working -ti bgross27/neuro_analysis2 $*
+    sudo -E docker run -v ${PADRE_ROOT}:/padre -v `pwd`:/working -w /working -ti bgross27/neuro_analysis $*
 
 ---
 
