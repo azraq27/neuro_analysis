@@ -14,7 +14,7 @@ RUN curl -L http://neuro.debian.net/lists/trusty.us-tn.full > /etc/apt/sources.l
 RUN curl -L https://afni.nimh.nih.gov/pub/dist/tgz/linux_openmp_64.tgz \
     | tar zxC /usr/local && \
     mv /usr/local/linux_openmp_64 /usr/local/afni
-RUN apt-get install -y libxp6 gsl-bin
+RUN apt-get install -y libxp6 gsl-bin libjpeg62-dev
 ENV PATH $PATH:/usr/local/afni
 
 # Freesurfer
