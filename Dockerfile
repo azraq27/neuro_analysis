@@ -27,7 +27,7 @@ RUN echo -e "bgross@mcw.edu\n3526\n*CyykqDk3ym5g\nFSxiivoYY/SZY" > $FREESURFER_H
 # R
 RUN echo "deb http://cloud.r-project.org/bin/linux/ubuntu trusty/" > /etc/apt/sources.list.d/R.sources.list && \
     apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9 && \
-    apt-get update && apt-get install r-base
+    apt-get update && apt-get install -y r-base
 
 # neural
 RUN pip install git+https://github.com/azraq27/neural.git \
