@@ -25,9 +25,11 @@ ENV PATH $PATH:/usr/local/freesurfer/bin
 RUN echo -e "bgross@mcw.edu\n3526\n*CyykqDk3ym5g\nFSxiivoYY/SZY" > $FREESURFER_HOME/license.txt
 
 # R
+# 3dMVM requires afex
 RUN echo "deb http://cloud.r-project.org/bin/linux/ubuntu trusty/" > /etc/apt/sources.list.d/R.sources.list && \
     apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9 && \
-    apt-get update && apt-get install -y r-base
+    apt-get update && apt-get install -y r-base && \
+    R -e 'install.packages("afex",repos="http://cloud.r-project.org/")'
 
 # neural
 RUN pip install git+https://github.com/azraq27/neural.git \
