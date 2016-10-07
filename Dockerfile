@@ -29,7 +29,7 @@ RUN echo -e "bgross@mcw.edu\n3526\n*CyykqDk3ym5g\nFSxiivoYY/SZY" > $FREESURFER_H
 RUN echo "deb http://cloud.r-project.org/bin/linux/ubuntu trusty/" > /etc/apt/sources.list.d/R.sources.list && \
     apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9 && \
     apt-get update && apt-get install -y r-base && \
-    R -e 'install.packages("afex",repos="http://cloud.r-project.org/")'
+    R -e 'install.packages(c("afex","phia"),repos="http://cloud.r-project.org/")'
 
 # neural
 RUN pip install git+https://github.com/azraq27/neural.git \
